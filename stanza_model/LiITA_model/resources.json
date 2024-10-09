@@ -1,0 +1,101 @@
+{
+  "it": {
+    "pretrain": {
+      "conll17": {
+      }
+    },
+    "backward_charlm": {
+      "conll17": {
+        
+      }
+    },
+    "forward_charlm": {
+      "conll17": {
+      }
+    },
+    "tokenize":{
+      "it_liita_tokenizer":{
+
+      }
+    },
+    "lemma":{
+      "it_liita_charlm_lemmatizer":{
+        "dependencies": [
+          {
+            "model": "forward_charlm",
+            "package": "conll17"
+          },
+          {
+            "model": "backward_charlm",
+            "package": "conll17"
+          }
+        ]
+      }
+    },
+    "mwt": {
+      "it_liita_mwt_expander": {
+        
+      }
+    },
+    "pos":{
+      "it_liita_charlm_tagger":{
+        "dependencies": [
+          {
+            "model": "pretrain",
+            "package": "conll17"
+          },
+          {
+            "model": "forward_charlm",
+            "package": "conll17"
+          },
+          {
+            "model": "backward_charlm",
+            "package": "conll17"
+          }
+        ]
+      }
+    },
+
+
+    "depparse": {
+      "it_liita_charlm_parser": {
+          "dependencies": [
+            {
+              "model": "backward_charlm",
+              "package": "conll17"
+            },
+            {
+              "model": "forward_charlm",
+              "package": "conll17"
+            },
+          {
+            "model": "pretrain",
+            "package": "conll17"
+          }
+          ]
+      }
+    },
+    "default_processors": {
+      "tokenize": "it_liita_tokenizer",
+      "mwt": "it_liita_mwt_expander",
+      "lemma" : "it_liita_charlm_lemmatizer",
+      "pos":"it_liita_charlm_tagger",
+      "depparse": "it_liita_charlm_parser"
+      
+    },
+    "packages": {
+      "default": {
+        "tokenize": "it_liita_tokenizer",
+        "mwt": "it_liita_mwt_expander",
+        "lemma" : "it_liita_charlm_lemmatizer",
+        "pos":"it_liita_charlm_tagger",
+        "depparse": "it_liita_charlm_parser"
+      }
+    },
+    "default_dependencies": {
+    
+    },
+    "lang_name": "Italian"
+  }
+}
+
