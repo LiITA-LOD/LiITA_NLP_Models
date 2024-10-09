@@ -84,10 +84,30 @@ If everything went correctly the conllu file should contain something similar to
 21	.	.	PUNCT	FS	_	3	punct	_	start_char=153|end_char=154|SpaceAfter=No
 ```
 
-
 Similarly, if the file to be annotated is in conllu format, use:
 ```
 python processConllu.py  ./LiITA_model <conlluFile.conllu> old_italian_out.conllu
 ```
+## Evaluation
 
+Model evaluation on the test set (The test suite included in Stanza was used).
+```
+             --------  EVALUATION ----------
+End to end results for it_liita models on it_liita test data:
+Metric     | Precision |    Recall |  F1 Score | AligndAcc
+-----------+-----------+-----------+-----------+-----------
+Tokens     |     99.81 |     99.77 |     99.79 |
+Sentences  |     89.26 |     89.66 |     89.46 |
+Words      |     99.62 |     99.61 |     99.61 |
+UPOS       |     97.03 |     97.02 |     97.03 |     97.41
+XPOS       |     92.69 |     92.68 |     92.68 |     93.04
+UFeats     |     94.66 |     94.65 |     94.65 |     95.02
+AllTags    |     90.61 |     90.60 |     90.60 |     90.96
+Lemmas     |     97.39 |     97.38 |     97.39 |     97.77
+UAS        |     86.49 |     86.48 |     86.48 |     86.82
+LAS        |     82.31 |     82.30 |     82.31 |     82.63
+CLAS       |     75.90 |     75.61 |     75.76 |     76.00
+MLAS       |     69.37 |     69.09 |     69.23 |     69.45
+BLEX       |     73.89 |     73.60 |     73.75 |     73.99
+```
 
