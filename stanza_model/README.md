@@ -39,7 +39,49 @@ this commands will produce an annotated file (```Italian```) with tok,lemma,pos,
 If everything went correctly the conllu file should contain something similar to this:
 
 ```
+# text = L'Italia è una Repubblica democratica, fondata sul lavoro.
+# sent_id = 0
+1	L'	il	DET	RD	Definite=Def|Number=Sing|PronType=Art	2	det	_	start_char=0|end_char=2|SpaceAfter=No
+2	Italia	Italia	PROPN	SP	_	5	nsubj	_	start_char=2|end_char=8
+3	è	essere	AUX	VA	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	start_char=9|end_char=10
+4	una	uno	DET	RI	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	5	det	_	start_char=11|end_char=14
+5	Repubblica	repubblica	NOUN	S	Gender=Fem|Number=Sing	0	root	_	start_char=15|end_char=25
+6	democratica	democratico	ADJ	A	Gender=Fem|Number=Sing	5	amod	_	start_char=26|end_char=37|SpaceAfter=No
+7	,	,	PUNCT	FF	_	5	punct	_	start_char=37|end_char=38
+8	fondata	fondare	VERB	V	Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part	5	acl	_	start_char=39|end_char=46
+9-10	sul	_	_	_	_	_	_	_	start_char=47|end_char=50
+9	su	su	ADP	E	_	11	case	_	_
+10	il	il	DET	RD	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	_
+11	lavoro	lavoro	NOUN	S	Gender=Masc|Number=Sing	8	obl	_	start_char=51|end_char=57|SpaceAfter=No
+12	.	.	PUNCT	FS	_	5	punct	_	start_char=57|end_char=58
 
+# text = La sovranità appartiene al popolo, che la esercita nelle forme e nei limiti della Costituzione.
+# sent_id = 1
+1	La	il	DET	RD	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	start_char=59|end_char=61
+2	sovranità	sovranità	NOUN	S	Gender=Fem	3	nsubj	_	start_char=62|end_char=71
+3	appartiene	appartenere	VERB	V	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=72|end_char=82
+4-5	al	_	_	_	_	_	_	_	start_char=83|end_char=85
+4	a	a	ADP	E	_	6	case	_	_
+5	il	il	DET	RD	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+6	popolo	popolo	NOUN	S	Gender=Masc|Number=Sing	3	obl	_	start_char=86|end_char=92|SpaceAfter=No
+7	,	,	PUNCT	FF	_	6	punct	_	start_char=92|end_char=93
+8	che	che	PRON	PR	PronType=Rel	10	nsubj	_	start_char=94|end_char=97
+9	la	la	PRON	PC	Clitic=Yes|Gender=Fem|Number=Sing|Person=3|PronType=Prs	10	obj	_	start_char=98|end_char=100
+10	esercita	esercitare	VERB	V	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	_	start_char=101|end_char=109
+11-12	nelle	_	_	_	_	_	_	_	start_char=110|end_char=115
+11	in	in	ADP	E	_	13	case	_	_
+12	le	il	DET	RD	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	13	det	_	_
+13	forme	forma	NOUN	S	Gender=Fem|Number=Plur	10	obl	_	start_char=116|end_char=121
+14	e	e	CCONJ	CC	_	17	cc	_	start_char=122|end_char=123
+15-16	nei	_	_	_	_	_	_	_	start_char=124|end_char=127
+15	in	in	ADP	E	_	17	case	_	_
+16	i	il	DET	RD	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	17	det	_	_
+17	limiti	limite	NOUN	S	Gender=Masc|Number=Plur	13	conj	_	start_char=128|end_char=134
+18-19	della	_	_	_	_	_	_	_	start_char=135|end_char=140
+18	di	di	ADP	E	_	20	case	_	_
+19	la	il	DET	RD	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	20	det	_	_
+20	Costituzione	costituzione	NOUN	S	Gender=Fem|Number=Sing	17	nmod	_	start_char=141|end_char=153|SpaceAfter=No
+21	.	.	PUNCT	FS	_	3	punct	_	start_char=153|end_char=154|SpaceAfter=No
 ```
 
 
