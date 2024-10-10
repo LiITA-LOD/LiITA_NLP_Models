@@ -12,9 +12,22 @@ The training data for the Stanza model was obtained starting from the conllu fil
 
 Clone this repository:
 ```
-git@github.com:LiITA-LOD/LiITA_NLP_Models.git
+git clone git@github.com:LiITA-LOD/LiITA_NLP_Models.git
 cd LiITA_NLP_Models/stanza_model
 ```
+If you have problem with git LFS bandwidth you can download the model file with :
+```
+curl -L -o LiITA_model.tgz https://datacloud.di.unito.it/index.php/s/mJQf9HNsErkrQjk/download/LiITA_model.tgz
+```
+or 
+```
+wget -O LiITA_model.tgz https://datacloud.di.unito.it/index.php/s/mJQf9HNsErkrQjk/download/LiITA_model.tgz
+```
+and extract with 
+```
+tar -xvf LiITA_model.tgz
+```
+
 Create and activate a python virtual environment (virtualenv, conda, minicoda, etc). Here an example with virtualenv:
 ```
 virtualenv -p python3 venv
